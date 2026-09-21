@@ -1,0 +1,91 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum QuoteStatus {
+  PENDING
+  REVIEWED
+  QUOTED
+  ARCHIVED
+}
+
+enum ContactStatus {
+  UNREAD
+  READ
+  RESPONDED
+}
+
+enum EquipmentCategory {
+  SHEET_METAL
+  CNC_MACHINING
+  SOFTWARE_QC
+}
+
+model User {
+  id           String   @id @default(uuid())
+  email        String   @unique
+  passwordHash String
+  name         String
+  role         Role     @default(ADMIN)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model QuoteRequest {
+  id             String      @id @default(uuid())
+  name           String
+  email          String
+  phone          String
+  projectDetails String
+  filePath       String?
+  fileName       String?
+  status         QuoteStatus @default(PENDING)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+model ContactMessage {
+  id        String        @id @default(uuid())
+  name      String
+  email     String
+  phone     String?
+  subject   String?
+  message   String
+  status    ContactStatus @default(UNREAD)
+  createdAt DateTime      @default(now())
+  updatedAt DateTime      @updatedAt
+}
+
+model Service {
+  id        String   @id @default(uuid())
+  slug      String   @unique
+  title     String
+  shortDesc String
+  fullDesc  String
+  bullets   String[]
+  imageUrl  String?
+  sortOrder Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Equipment {
+  id             String            @id @default(uuid())
+  category       EquipmentCategory
+  title          String
+  specifications String
+  description    String
+  sortOrder      Int               @default(0)
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+}
