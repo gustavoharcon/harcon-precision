@@ -1,17 +1,17 @@
 import { Link } from 'react-router';
-import { 
-  ArrowRight, 
-  Layers, 
-  Cpu, 
-  Cog, 
-  ShieldCheck, 
-  CheckCircle2, 
-  Building2, 
+import {
+  ArrowRight,
+  Layers,
+  Cpu,
+  Cog,
+  ShieldCheck,
+  CheckCircle2,
+  Building2,
   Gauge,
   Factory
 } from 'lucide-react';
 import { GlobalCTA } from '../components/GlobalCTA.js';
-
+// Checking if change is viewable on Jira to this branch
 export function meta() {
   return [
     { title: "Harcon Precision Metals | Sheet Metal Fabrication & CNC Machining" },
