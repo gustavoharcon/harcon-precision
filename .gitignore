@@ -1,10 +1,12 @@
 # ==========================================
 # Dependencies & Build Outputs
 # ==========================================
-*/node_modules/
-*/dist/
-*/build/
-*/out/
+node_modules/
+.next/
+dist/
+build/
+out/
+*.tsbuildinfo
 
 # ==========================================
 # Environment Variables & Secrets
@@ -12,25 +14,16 @@
 .env
 .env.*
 !.env.example
+!.env.local
 
 # ==========================================
-# Frontend (React Router v7 & Vite)
+# User Uploads
 # ==========================================
-# Ignore React Router's auto-generated types and server build outputs
-frontend/.react-router/
-# Ignore Vite cache
-frontend/.vite/
-frontend/eslint-cache/
+uploads/*
+!uploads/.gitkeep
 
 # ==========================================
-# Backend (Node/Express/Prisma)
-# ==========================================
-# Ignore user uploads (CAD files, PDFs from quote requests) but keep the directory
-backend/uploads/*
-!backend/uploads/.gitkeep
-
-# ==========================================
-# Testing
+# Testing & Coverage
 # ==========================================
 coverage/
 .nyc_output/
@@ -45,7 +38,7 @@ pnpm-debug.log*
 *.log
 
 # ==========================================
-# OS & IDE / Editor
+# OS & Editor
 # ==========================================
 .DS_Store
 .DS_Store?
