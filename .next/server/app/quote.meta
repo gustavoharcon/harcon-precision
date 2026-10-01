@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/quote/layout,_N_T_/quote/page,_N_T_/quote"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/3fe1c6584e8b572934bfa5d3824a2c18e93a771f0801beb92db86a096b30d3a0/$/quote",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/quote/page"
+    },
+    "isFallback": false
+  }
+}
