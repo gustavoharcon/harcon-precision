@@ -24,17 +24,10 @@ export default function HomePage() {
     <div>
       {/* SECTION 1: HERO */}
       <section
-        style={{
-          position: 'relative',
-          padding: '7rem 0 6rem',
-          borderBottom: '1px solid var(--border-subtle)',
-          overflow: 'hidden',
-          background:
-            'linear-gradient(180deg, rgba(17, 24, 39, 0.4) 0%, rgba(10, 14, 23, 0.95) 100%)',
-        }}
+        className="hero-section"
       >
         {/* Subtle grid accent overlay */}
-        <div
+        {/* <div
           style={{
             position: 'absolute',
             top: 0,
@@ -48,7 +41,7 @@ export default function HomePage() {
               'radial-gradient(circle at 50% 30%, rgba(255, 94, 20, 0.1) 0%, transparent 60%)',
             zIndex: 1,
           }}
-        />
+        /> */}
 
         <div className="container" style={{ position: 'relative', zIndex: 2 }}>
           <div style={{ maxWidth: '920px' }}>

@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-display: 'Chakra Petch', sans-serif;
+  --font-plex-sans: 'IBM Plex Sans', sans-serif;
+  --font-plex-mono: 'IBM Plex Mono', monospace;
 
   /* Industrial Color Palette */
   --bg-dark: #0a0e17;
@@ -33,6 +35,10 @@
 
   /* Miscellanous Colors */
   --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #DFDFDF;
+  --temp-color: #935D8B;
+  --accent-blue: #0066CC;
 }
 
 * {
@@ -43,16 +49,16 @@
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-dark);
+  background: linear-gradient(rgb(17, 24, 39) 0%, rgb(10, 14, 23) 100%);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   overflow-x: hidden;
-  background-image:
+  /* background-image:
     radial-gradient(circle at 15% 15%, rgba(255, 94, 20, 0.05) 0%, transparent 40%),
     radial-gradient(circle at 85% 75%, rgba(56, 189, 248, 0.04) 0%, transparent 40%),
     linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px); */
   background-size: 100% 100%, 100% 100%, 48px 48px, 48px 48px;
 }
 
@@ -91,6 +97,18 @@ a {
   color: inherit;
   text-decoration: none;
   transition: all 0.2s ease;
+}
+
+.font-inter {
+  font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-plex-sans {
+  font-family: var(--font-plex-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.font-plex-mono {
+  font-family: var(--font-plex-mono), monospace;
 }
 
 /* Layout Utilities */
@@ -137,6 +155,17 @@ a {
   background: var(--accent-orange);
   box-shadow: 0 0 8px var(--accent-orange);
 }
+
+/* Text Animations */
+.hover-up {
+  transition: all 0.25s ease;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-2px);
+  }
+}
+
 
 /* Buttons */
 .btn-primary {
@@ -191,33 +220,184 @@ a {
   transform: translateY(-2px);
 }
 
+.btn-third {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  /* padding: 20px 30px; */
+  padding: 0.85rem 1.85rem;
+  border: 3px solid var(--color-grey);
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 6px #dfdfdf inset;
+  transition: all 0.25s ease;
+}
+
+.btn-third:hover {
+  background: #dfdfdf;
+  transform: translateY(-2px);
+  color: #000;
+}
+
 /* Navigation */
 .navbar {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
   background: transparent;
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-subtle);
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 
   >.container {
     max-width: unset;
-    padding-left: unset;
 
     .navbar-inner {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       height: 80px;
 
       .brand-logo {
+        /* background-color: var(--color-black); */
+        gap: 0.75rem;
+        padding-right: 15px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: 230px;
+          width: 100%;
+          height: auto;
+          padding: 5px 5px 5px 0;
+          object-fit: cover;
+        }
+      }
+
+      .nav-links {
+        display: none;
+        align-items: center;
+        gap: 2rem;
+
+        .nav-link {
+          font-size: 0.88rem;
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          color: var(--color-white);
+          position: relative;
+          padding: 0.5rem 0;
+
+          &:hover,
+          &.active,
+          &:focus {
+            color: var(--color-white);
+          }
+
+          &.active {
+            &:after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: var(--color-white);
+              box-shadow: 0 0 8px var(--color-white);
+              opacity: 0.7;
+            }
+          }
+        }
+
+        @media (min-width: 960px) {
+          display: flex;
+        }
+      }
+
+      .nav-cta-group {
         display: flex;
         align-items: center;
-        background-color: var(--color-black);
-        gap: 0.75rem;
+        gap: 1.25rem;
+      }
+
+      .phone-quick {
+        display: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+        color: var(--color-white);
+        align-items: center;
+        gap: 0.4rem;
+
+        svg {
+          color: var(--color-white);
+        }
+      }
+
+      @media (min-width: 1120px) {
+        .phone-quick {
+          display: flex;
+        }
+      }
+
+      /* Mobile Menu Button */
+      .mobile-toggle {
+        display: flex;
+        background: transparent;
+        border: 1px solid var(--border-strong);
+        color: var(--text-main);
+        padding: 0.5rem;
+        border-radius: var(--radius-sm);
+        cursor: pointer;
+      }
+
+      @media (min-width: 960px) {
+        .mobile-toggle {
+          display: none;
+        }
+      }
+
+      .mobile-drawer {
+        background: var(--bg-surface);
+        border-bottom: 1px solid var(--border-subtle);
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
       }
     }
+  }
+}
+
+/* Hero Section section */
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 13rem 0 6rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(https://res.cloudinary.com/irwujctd/image/upload/v1790883091/CNC_milling_machine_machining_metal_mkfimh.jpg);
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #333333, #0066CC);
+    opacity: 0.4;
+    /* Adjust between 0.0 and 1.0 for desired transparency */
+    pointer-events: none;
+    /* Ensures the overlay does not block clicks on underlying content */
+    z-index: 1;
   }
 }
 
@@ -260,96 +440,6 @@ a {
   margin-top: 3px;
 }
 
-.nav-links {
-  display: none;
-  align-items: center;
-  gap: 2rem;
-}
-
-@media (min-width: 960px) {
-  .nav-links {
-    display: flex;
-  }
-}
-
-.nav-link {
-  font-family: var(--font-display);
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  position: relative;
-  padding: 0.5rem 0;
-}
-
-.nav-link:hover,
-.nav-link.active {
-  color: #ffffff;
-}
-
-.nav-link.active::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--accent-orange);
-  box-shadow: 0 0 8px var(--accent-orange);
-}
-
-.nav-cta-group {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.phone-quick {
-  display: none;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  align-items: center;
-  gap: 0.4rem;
-}
-
-@media (min-width: 1120px) {
-  .phone-quick {
-    display: flex;
-  }
-}
-
-.phone-quick:hover {
-  color: var(--accent-orange);
-}
-
-/* Mobile Menu Button */
-.mobile-toggle {
-  display: flex;
-  background: transparent;
-  border: 1px solid var(--border-strong);
-  color: var(--text-main);
-  padding: 0.5rem;
-  border-radius: var(--radius-sm);
-  cursor: pointer;
-}
-
-@media (min-width: 960px) {
-  .mobile-toggle {
-    display: none;
-  }
-}
-
-.mobile-drawer {
-  background: var(--bg-surface);
-  border-bottom: 1px solid var(--border-subtle);
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
 
 /* Industrial Cards */
 .card-industrial {

@@ -4,18 +4,20 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
+import harcon_precision_logo from '@/public/images/logo/Harcon_Precision_logo_with_caliper_2026100113360_01.png';
+import Image from 'next/image';
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   const links = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Equipment', href: '/equipment' },
-    { name: 'Request a Quote', href: '/quote' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Home', href: '/', classes: 'hover-up' },
+    { name: 'About', href: '/about', classes: 'hover-up' },
+    { name: 'Services', href: '/services', classes: 'hover-up' },
+    { name: 'Equipment', href: '/equipment', classes: 'hover-up' },
+    { name: 'Request a Quote', href: '/quote', classes: 'hover-up' },
+    { name: 'Contact', href: '/contact', classes: 'hover-up' },
   ];
 
   return (
@@ -24,7 +26,7 @@ export function Navbar() {
         <div className="navbar-inner">
           {/* Brand Logo */}
           <Link href="/" className="brand-logo" onClick={() => setMobileOpen(false)}>
-            {/* <img src={harcon_precision_logo} alt={} /> */}
+            <Image src={harcon_precision_logo} alt={process.env.COMPANY_NAME || ''} width={0} height={0} />
           </Link>
 
           {/* Desktop Nav Links */}
@@ -35,7 +37,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`nav-link ${isActive ? 'active' : ''}`}
+                  className={`nav-link font-plex-sans ${isActive ? 'active' : ''} ${link.classes}`}
                 >
                   {link.name}
                 </Link>
@@ -46,14 +48,13 @@ export function Navbar() {
           {/* Nav CTA Group */}
           <div className="nav-cta-group">
             <a href="tel:6194235544" className="phone-quick">
-              <Phone size={16} style={{ color: 'var(--accent-orange)' }} />
+              <Phone size={16} />
               <span>(619) 423-5544</span>
             </a>
 
             <Link
               href="/quote"
-              className="btn-primary"
-              style={{ padding: '0.65rem 1.25rem', fontSize: '0.85rem' }}
+              className="btn-third"
             >
               <span>Get a Quote</span>
               <ArrowUpRight size={16} />
