@@ -95,22 +95,9 @@ export function Navbar() {
           >
             <a
               href="tel:6194235544"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '0.5rem',
-                color: 'var(--text-muted)',
-              }}
             >
               <Phone size={16} /> (619) 423-5544
             </a>
-            <Link
-              href="/admin"
-              onClick={() => setMobileOpen(false)}
-              style={{ fontSize: '0.8rem', color: 'var(--text-dim)' }}
-            >
-              Portal Login
-            </Link>
           </div>
         </div>
       )}

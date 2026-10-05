@@ -25,48 +25,19 @@ export default function HomePage() {
   return (
     <div>
       {/* SECTION 1: HERO */}
-      <section
-        className="hero-section"
-      >
-        {/* Subtle grid accent overlay */}
-        {/* <div
-          style={{
-            position: 'absolute',
-            top: 0,
-            left: '50%',
-            transform: 'translateX(-50%)',
-            width: '100%',
-            maxWidth: '1400px',
-            height: '100%',
-            pointerEvents: 'none',
-            backgroundImage:
-              'radial-gradient(circle at 50% 30%, rgba(255, 94, 20, 0.1) 0%, transparent 60%)',
-            zIndex: 1,
-          }}
-        /> */}
-
-        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
-          {/* <div className="badge-tag">
-              <Factory size={14} />
-              <span>San Diego Manufacturing Since 1979</span>
-            </div> */}
+      <section className="hero-section">
+        <div className="container">
           <div className="row">
             <div className="col text-col">
+              <div className="badge-tag">
+                <span>Precision Sheet Metal Fabrication</span>
+              </div>
               <h1 style={{ marginBottom: '1.5rem', lineHeight: '1.15' }}>
                 High Precision Sheet Metal Fabrication and Machining
               </h1>
 
-              <p
-                style={{
-                  fontSize: '1.25rem',
-                  color: '#cbd5e1',
-                  marginBottom: '2.5rem',
-                  maxWidth: '780px',
-                  lineHeight: '1.6',
-                }}
-              >
-                Delivering state-of-the-art manufacturing for the electronics, medical, and aerospace
-                industries since 1979.
+              <p>
+                We build the critical components for computers, electronics, medical, and biomedical industries. Our San Diego facility delivers exact tolerances and reliable production runs.
               </p>
 
               <div className="buttons-container">
@@ -84,114 +55,8 @@ export default function HomePage() {
                 </Link>
               </div>
             </div>
-            {/* <div className="col logo-col">
-              <Link href="/" className="brand-logo">
-                <Image src={harcon_precision_logo} alt={process.env.COMPANY_NAME || ''} width={0} height={0} />
-              </Link>
-            </div> */}
 
           </div>
-
-          {/* Quick Metrics */}
-          {/* <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
-              gap: '1.5rem',
-              marginTop: '4.5rem',
-              paddingTop: '2.5rem',
-              borderTop: '1px solid var(--border-subtle)',
-            }}
-          >
-            <div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '2.2rem',
-                  fontWeight: 700,
-                  color: 'var(--accent-orange)',
-                }}
-              >
-                60,000
-              </div>
-              <div
-                style={{
-                  fontSize: '0.85rem',
-                  color: 'var(--text-muted)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                Sq. Ft. Facility
-              </div>
-            </div>
-            <div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '2.2rem',
-                  fontWeight: 700,
-                  color: '#ffffff',
-                }}
-              >
-                1979
-              </div>
-              <div
-                style={{
-                  fontSize: '0.85rem',
-                  color: 'var(--text-muted)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                Founded In San Diego
-              </div>
-            </div>
-            <div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '2.2rem',
-                  fontWeight: 700,
-                  color: 'var(--accent-steel)',
-                }}
-              >
-                ±0.0002"
-              </div>
-              <div
-                style={{
-                  fontSize: '0.85rem',
-                  color: 'var(--text-muted)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                Precision Tolerances
-              </div>
-            </div>
-            <div>
-              <div
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontSize: '2.2rem',
-                  fontWeight: 700,
-                  color: '#ffffff',
-                }}
-              >
-                MIETrak Pro
-              </div>
-              <div
-                style={{
-                  fontSize: '0.85rem',
-                  color: 'var(--text-muted)',
-                  textTransform: 'uppercase',
-                  letterSpacing: '0.05em',
-                }}
-              >
-                ERP Live Tracking
-              </div>
-            </div>
-          </div> */}
         </div>
       </section>
 
