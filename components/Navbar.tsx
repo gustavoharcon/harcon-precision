@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
-import harcon_precision_logo from '@/public/images/logo/Harcon_Precision_logo_with_caliper_2026100113360_01.png';
+import harcon_precision_logo from '@/public/images/logo/Harcon_Precision_Logo_02_White_441px.png';
 import Image from 'next/image';
 
 export function Navbar() {
@@ -57,7 +57,6 @@ export function Navbar() {
               className="btn-third"
             >
               <span>Get a Quote</span>
-              <ArrowUpRight size={16} />
             </Link>
 
             <button
