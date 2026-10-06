@@ -16,7 +16,6 @@ export function Navbar() {
     { name: 'About', href: '/about', classes: 'hover-up' },
     { name: 'Services', href: '/services', classes: 'hover-up' },
     { name: 'Equipment', href: '/equipment', classes: 'hover-up' },
-    { name: 'Request a Quote', href: '/quote', classes: 'hover-up' },
     { name: 'Contact', href: '/contact', classes: 'hover-up' },
   ];
 
