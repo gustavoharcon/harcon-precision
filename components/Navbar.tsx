@@ -25,7 +25,12 @@ export function Navbar() {
         <div className="navbar-inner">
           {/* Brand Logo */}
           <Link href="/" className="brand-logo" onClick={() => setMobileOpen(false)}>
-            <Image src={harcon_precision_logo} alt={process.env.COMPANY_NAME || ''} width={0} height={0} />
+            <Image
+              src={harcon_precision_logo}
+              alt={process.env.NEXT_PUBLIC_COMPANY_NAME || 'Harcon Precision Metals'}
+              width={0}
+              height={0}
+            />
           </Link>
 
           {/* Desktop Nav Links */}

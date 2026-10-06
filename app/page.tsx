@@ -1,7 +1,5 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Image from 'next/image';
-import harcon_precision_logo from '@/public/images/logo/Harcon_Precision_Logo_02_White_441px.png';
 import {
   ArrowRight,
   Layers,
@@ -14,6 +12,8 @@ import {
   Factory,
 } from 'lucide-react';
 import { GlobalCTA } from '@/components/GlobalCTA';
+import FacilityAndCapacity from '@/components/FacilityAndCapacity';
+import ServicesColumns from '@/components/ServicesColumns';
 
 export const metadata: Metadata = {
   title: 'Harcon Precision Metals | Sheet Metal Fabrication & CNC Machining',
@@ -59,6 +59,10 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+
+      <FacilityAndCapacity />
+
+      <ServicesColumns />
 
       {/* SECTION 2: TRUST BAR (50/50 Split) */}
       <section className="section-padding">
