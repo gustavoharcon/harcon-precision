@@ -14,6 +14,7 @@ import {
 import { GlobalCTA } from '@/components/GlobalCTA';
 import FacilityAndCapacity from '@/components/FacilityAndCapacity';
 import ServicesColumns from '@/components/ServicesColumns';
+import FabricationServices from '@/components/FabricationServices';
 
 export const metadata: Metadata = {
   title: 'Harcon Precision Metals | Sheet Metal Fabrication & CNC Machining',
@@ -63,6 +64,8 @@ export default function HomePage() {
       <FacilityAndCapacity />
 
       <ServicesColumns />
+
+      <FabricationServices />
 
       {/* SECTION 2: TRUST BAR (50/50 Split) */}
       <section className="section-padding">
