@@ -28,6 +28,33 @@ const ServicesColumns = () => {
                             <p className="description">Clean cuts on complex geometries with minimal heat distortion</p>
                         </div>
                     </div>
+                    <div className="col">
+                        <div className="text-container">
+                            <div className="icon-wrapper">
+                                {getIcon("cnc")}
+                            </div>
+                            <h3 className="title">CNC punching and machining</h3>
+                            <p className="description">High-speed production with repeatable accuracy on every part</p>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="text-container">
+                            <div className="icon-wrapper">
+                                {getIcon("metal")}
+                            </div>
+                            <h3 className="title">Welding and powder coating</h3>
+                            <p className="description">Strong joints and durable finishes that meet strict specifications</p>
+                        </div>
+                    </div>
+                    <div className="col">
+                        <div className="text-container">
+                            <div className="icon-wrapper">
+                                {getIcon("sheet")}
+                            </div>
+                            <h3 className="title">Sheet metal fabrication</h3>
+                            <p className="description">Complete forming and assembly for enclosures, brackets, and custom components</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

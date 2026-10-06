@@ -587,26 +587,29 @@ section.services-columns {
       >.col {
         width: 48%;
       }
-    }
-  }
 
-  .services-row {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
+      &.services-row {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-start;
 
-    .text-container {
-      gap: 16px;
-    }
+        >.col {
+          width: 33.33%;
+        }
 
-    .icon-wrapper {
-      position: relative;
-      bottom: -10px;
+        .text-container {
+          gap: 16px;
+        }
 
-      svg {
-        color: var(--color-black);
-        font-size: 48px;
+        .icon-wrapper {
+          position: relative;
+          bottom: -10px;
+
+          svg {
+            color: var(--color-black);
+            font-size: 48px;
+          }
+        }
       }
     }
   }
