@@ -572,32 +572,44 @@ section.facility-and-capacity {
   padding-bottom: 120px;
   background-color: var(--section-color-beige);
 
-  .row {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: center;
-    gap: 30px;
+  >.container {
+    >.row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
 
-    >.col {
-      width: 50%;
+      >.col {
+        width: 50%;
 
-      .text-container {
-        .badge-tag {
-          color: var(--accent-blue);
+        .text-container {
+          .description {
+            font-size: 16px;
+            margin-bottom: 30px;
+          }
+
+          .badge-tag {
+            color: var(--accent-blue);
+          }
+
+          .column-title {
+            color: var(--accent-blue);
+            font-family: var(--font-plex-mono);
+            font-weight: 500;
+            font-size: 19px;
+            margin-bottom: 16px;
+          }
+
+          .column-description {
+            font-size: 16px;
+          }
         }
 
-        .column-title {
-          color: var(--accent-blue);
-          font-family: var(--font-plex-mono);
-          font-weight: 500;
-          font-size: 19px;
-          margin-bottom: 16px;
-        }
       }
-
     }
   }
+
 
   .buttons-container {
     >a:first-of-type {
@@ -673,6 +685,7 @@ section.services-columns {
 
         .text-container {
           gap: 16px;
+          margin-bottom: 0;
 
           h3 {
             color: var(--accent-blue);
@@ -766,6 +779,118 @@ section.qualifications-band {
           color: var(--color-black);
           font-weight: 600;
           font-family: var(--font-dm-sans);
+        }
+      }
+    }
+  }
+}
+
+section.precision-capabilities {
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background: linear-gradient(180deg, #000 0%, #252525 100%);
+
+  >.container {
+    >.row {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 60px;
+
+      >.col {
+        width: calc(50% - 60px);
+
+        &.image-side {
+          position: relative;
+
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            max-width: 768px;
+          }
+
+          .text-box {
+            position: absolute;
+            right: -50px;
+            bottom: 50px;
+            padding: 45px;
+            max-width: 300px;
+            background-color: var(--accent-blue);
+
+            p {
+              font-size: 26px;
+              font-weight: 700;
+              font-style: italic;
+              line-height: 1.2em;
+              letter-spacing: -2px;
+              word-spacing: 0px;
+              color: var(--color-white);
+            }
+          }
+        }
+
+        &.text-side {
+          >.text-container {
+            >.title {
+              color: var(--color-white);
+            }
+
+            p {
+              color: var(--color-white);
+              font-size: 16px;
+              margin-top: 30px;
+              margin-bottom: 30px;
+            }
+          }
+
+          >.stats {
+            display: flex;
+            flex-flow: row nowrap;
+            gap: 8px;
+
+            >.stat-item {
+              background-color: var(--color-black);
+              padding: 16px 30px 30px;
+              position: relative;
+              border: 6px solid var(--color-black);
+              width: 33.33%;
+
+              .stat-number {
+                font-family: var(--font-plex-mono);
+                font-size: 56px;
+                font-weight: 500;
+                color: var(--accent-blue);
+              }
+
+              .stat-label {
+                font-size: 17px;
+                font-weight: 500;
+                line-height: 1.4em;
+                letter-spacing: -.6px;
+                color: var(--color-white);
+                font-family: var(--font-plex-mono);
+              }
+
+              &:before,
+              &:after {
+                position: absolute;
+                right: -6px;
+                bottom: -6px;
+                content: "" !important;
+                background-color: var(--accent-blue);
+              }
+
+              &:before {
+                width: 30px;
+                height: 6px;
+              }
+
+              &:after {
+                width: 6px;
+                height: 30px;
+              }
+            }
+          }
         }
       }
     }
