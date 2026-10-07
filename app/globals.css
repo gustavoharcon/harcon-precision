@@ -80,6 +80,7 @@ h4,
 .font-display {
   font-family: var(--font-plex-sans);
   font-weight: 700;
+  line-height: 1.1em;
   letter-spacing: -0.02em;
   color: var(--text-main);
 }
@@ -554,6 +555,20 @@ section.facility-and-capacity {
 
     >.col {
       width: 50%;
+
+      .text-container {
+        .badge-tag {
+          color: var(--accent-blue);
+        }
+
+        .column-title {
+          color: var(--accent-blue);
+          font-family: var(--font-plex-mono);
+          font-weight: 500;
+          font-size: 19px;
+        }
+      }
+
     }
   }
 
@@ -586,19 +601,61 @@ section.services-columns {
 
       >.col {
         width: 48%;
+
+        .badge-tag {
+          color: var(--accent-blue);
+        }
+
+        .text {
+          font-weight: 500;
+        }
       }
 
       &.services-row {
         display: flex;
         flex-flow: row nowrap;
-        align-items: flex-start;
+        align-items: normal;
 
         >.col {
-          width: 33.33%;
+          width: 25%;
+          background-color: var(--color-white);
+          padding: 40px;
+          box-shadow: 0px 0px 0px 6px #dfdfdf;
+          position: relative;
+
+          &:before,
+          &:after {
+            position: absolute;
+            right: -6px;
+            bottom: -6px;
+            content: "" !important;
+            background-color: var(--accent-blue);
+          }
+
+          &:before {
+            width: 30px;
+            height: 6px;
+          }
+
+          &:after {
+            width: 6px;
+            height: 30px;
+          }
         }
 
         .text-container {
           gap: 16px;
+
+          h3 {
+            color: var(--accent-blue);
+            font-size: 19px;
+            font-weight: 500;
+            font-family: var(--font-plex-mono);
+          }
+
+          p {
+            font-size: 16px;
+          }
         }
 
         .icon-wrapper {

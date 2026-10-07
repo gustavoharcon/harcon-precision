@@ -11,7 +11,7 @@ const FacilityAndCapacity = () => {
                             <div className="badge-tag">
                                 <span>Facility</span>
                             </div>
-                            <h2 className="title">A 60,000 sq. ft. plant built for precision</h2>
+                            <h2 className="title">Operating 66,000 square feet of advanced CNC fabrication space</h2>
                             <p className="description">
                                 Our San Diego operation runs on advanced CAD/CAM systems and SolidWorks 3D modeling. Every job moves through a controlled production flow for consistent results.
                             </p>
@@ -27,16 +27,16 @@ const FacilityAndCapacity = () => {
                             </div>
                         </div>
                         <div className="buttons-container">
-                            <Link href="/equipment" className="btn-third">
+                            <Link href="#" className="btn-third">
                                 <span>View Equipment</span>
                             </Link>
-                            <Link href="/about" className="btn-fifth">
+                            <Link href="#" className="btn-fifth">
                                 <span>About Us</span>
                             </Link>
                         </div>
                     </div>
                     <div className="col">
-                        <Image className="right-column-image" src="https://res.cloudinary.com/irwujctd/image/upload/v1791313353/placeholder-01_hvjtig.png" alt="" width={600} height={0} />
+                        <Image className="right-column-image" src="https://res.cloudinary.com/irwujctd/image/upload/w_768/v1785878814/pacific-maritime-industries-facility_vlhhyz.png" alt="" width={600} height={0} />
                     </div>
                 </div>
             </div>

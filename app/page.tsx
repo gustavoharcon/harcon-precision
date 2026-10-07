@@ -43,13 +43,13 @@ export default function HomePage() {
 
               <div className="buttons-container">
                 <Link
-                  href="/quote"
+                  href="#"
                   className="btn-fourth"
                 >
                   <span>Request a Quote</span>
                 </Link>
                 <Link
-                  href="/services"
+                  href="#"
                   className="btn-fifth"
                 >
                   <span>Explore Capabilities</span>

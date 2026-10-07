@@ -11,12 +11,19 @@ export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
+  // const links = [
+  //   { name: 'Home', href: '/', classes: 'hover-up' },
+  //   { name: 'About', href: '/about', classes: 'hover-up' },
+  //   { name: 'Services', href: '/services', classes: 'hover-up' },
+  //   { name: 'Equipment', href: '/equipment', classes: 'hover-up' },
+  //   { name: 'Contact', href: '/contact', classes: 'hover-up' },
+  // ];
   const links = [
     { name: 'Home', href: '/', classes: 'hover-up' },
-    { name: 'About', href: '/about', classes: 'hover-up' },
-    { name: 'Services', href: '/services', classes: 'hover-up' },
-    { name: 'Equipment', href: '/equipment', classes: 'hover-up' },
-    { name: 'Contact', href: '/contact', classes: 'hover-up' },
+    { name: 'About', href: '#', classes: 'hover-up' },
+    { name: 'Services', href: '#', classes: 'hover-up' },
+    { name: 'Equipment', href: '#', classes: 'hover-up' },
+    { name: 'Contact', href: '#', classes: 'hover-up' },
   ];
 
   return (
