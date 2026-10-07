@@ -515,7 +515,7 @@ a {
           }
 
           p {
-            color: var(--color-grey-2);
+            color: var(--color-white);
             font-size: 20px;
             margin-bottom: 40px;
             font-family: var(--font-dm-sans);
