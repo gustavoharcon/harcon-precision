@@ -59,7 +59,7 @@
 
 body {
   font-family: var(--font-sans);
-  background: linear-gradient(rgb(17, 24, 39) 0%, rgb(10, 14, 23) 100%);
+  background: var(--section-color-beige);
   color: var(--text-main);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
@@ -105,6 +105,7 @@ h3 {
 p {
   font-size: 18px;
   font-weight: 400;
+  line-height: 1.6em;
   color: var(--color-black-2);
   font-family: var(--font-dm-sans);
 
@@ -266,7 +267,7 @@ a {
 /* Button Variants */
 .btn-third {
   color: var(--color-grey);
-  box-shadow: 0px 0px 0px 6px #dfdfdf;
+  box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.15);
 
   &:hover,
   &:focus,
@@ -279,7 +280,8 @@ a {
 .btn-fourth {
   color: var(--color-black);
   background-color: var(--color-white);
-  border: 6px solid rgba(255, 255, 255, 0.15);
+  /* border: 6px solid rgba(255, 255, 255, 0.15); */
+  border: 6px solid #dfdfdf;
 
   &:hover {
     background-color: var(--color-white-hover);
@@ -344,7 +346,7 @@ a {
   top: 0;
   z-index: 100;
   background: transparent;
-  backdrop-filter: blur(2px);
+  backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 
@@ -356,7 +358,7 @@ a {
     right: 0;
     bottom: 0;
     border-radius: inherit;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
     filter: blur(20px);
     z-index: -1;
     opacity: 0.6;
@@ -488,7 +490,7 @@ a {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding: 13rem 0 6rem;
+  padding: 13rem 0 13rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -501,17 +503,41 @@ a {
 
     >.row {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: space-between;
+      align-items: center;
       /* padding-left: 5%; */
-      max-width: 991px;
+      max-width: 1100px;
+      gap: 30px;
 
       >.col {
+        width: 15%;
+
+        &:first-of-type {
+          width: 85%;
+        }
+
+        &.certifications {
+          display: flex;
+          flex-flow: column nowrap;
+          align-items: center;
+          gap: 10px;
+
+          .title {
+            color: var(--color-white);
+            font-family: var(--font-dm-sans);
+            font-size: 19px;
+            font-weight: 600;
+            text-align: center;
+          }
+        }
+
+
         &.text-col {
           h1 {
             font-family: var(--font-plex-sans);
             text-transform: unset;
-            font-size: 84px;
+            font-size: 64px;
           }
 
           p {
@@ -535,7 +561,7 @@ a {
     width: 100%;
     height: 100%;
     background: linear-gradient(135deg, #333333, #0066CC);
-    opacity: 0.6;
+    opacity: 0.8;
     pointer-events: none;
     z-index: 1;
   }
@@ -566,6 +592,7 @@ section.facility-and-capacity {
           font-family: var(--font-plex-mono);
           font-weight: 500;
           font-size: 19px;
+          margin-bottom: 16px;
         }
       }
 
@@ -575,6 +602,7 @@ section.facility-and-capacity {
   .buttons-container {
     >a:first-of-type {
       color: var(--color-black);
+      box-shadow: 0px 0px 0px 6px #dfdfdf;
     }
   }
 
@@ -666,6 +694,78 @@ section.services-columns {
             color: var(--color-black);
             font-size: 48px;
           }
+        }
+      }
+    }
+  }
+}
+
+section.qualifications-band {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  top: -100px;
+  margin-bottom: -100px;
+
+  >.container {
+    >.row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: normal;
+      gap: 20px;
+
+      >.col {
+        width: 25%;
+        background-color: var(--color-white);
+        padding: 30px;
+        position: relative;
+        box-shadow: 0px 0px 0px 6px #dfdfdf;
+
+        &:before,
+        &:after {
+          position: absolute;
+          right: -6px;
+          bottom: -6px;
+          content: "" !important;
+          background-color: var(--accent-blue);
+        }
+
+        &:before {
+          width: 30px;
+          height: 6px;
+        }
+
+        &:after {
+          width: 6px;
+          height: 30px;
+        }
+
+        .icon {
+          color: var(--color-black);
+          display: block;
+          margin-bottom: 16px;
+
+          svg {
+            font-size: 42px;
+
+          }
+        }
+
+        .title {
+          font-family: var(--font-plex-mono);
+          font-weight: 700;
+          font-size: 17px;
+          font-style: italic;
+          line-height: 1.1em;
+          color: var(--accent-blue);
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-size: 16px;
+          color: var(--color-black);
+          font-weight: 600;
+          font-family: var(--font-dm-sans);
         }
       }
     }

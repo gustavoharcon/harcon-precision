@@ -4,7 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Phone, Menu, X, ArrowUpRight } from 'lucide-react';
-import harcon_precision_logo from '@/public/images/logo/Harcon_Precision_Logo_03_Colored.png';
+import harcon_precision_logo from '@/public/images/logo/harcon-precision-logo-c-348px.png';
 import Image from 'next/image';
 
 export function Navbar() {
