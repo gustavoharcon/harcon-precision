@@ -42,7 +42,7 @@ export default function HomePage() {
               </h1>
 
               <p>
-                We build the critical components for computers, electronics, medical, and biomedical industries. Our San Diego facility delivers exact tolerances and reliable production runs.
+                We build the critical components for computers, electronics, medical, and biomedical industries. Trusted by industry leaders since 1969, our San Diego facility delivers exact tolerances and reliable production runs.
               </p>
 
               <div className="buttons-container">
