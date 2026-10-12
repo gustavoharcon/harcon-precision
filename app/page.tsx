@@ -55,7 +55,6 @@ export default function HomePage() {
                   >
                     <span>Explore Services</span>
                   </Link>
-
                 </div>
               </div>
               <div className="bottom-row">
