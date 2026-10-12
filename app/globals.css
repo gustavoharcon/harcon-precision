@@ -490,15 +490,26 @@ a {
 .hero-section {
   position: relative;
   overflow: hidden;
-  padding: 13rem 0 13rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url(https://res.cloudinary.com/irwujctd/image/upload/v1791313180/CNC_milling_machine_machining_metal_wawo89.jpg);
 
-  .container {
+  /* &:before {
+    content: "";
+    position: absolute;
+    background: rgba(255, 255, 255, 0.2);
+    height: 100%;
+    width: 2px;
+    left: 11%;
+    top: 0;
+  } */
+
+  >.container {
     z-index: 2;
-    /* max-width: unset; */
+    padding: 0;
+    height: 100%;
+    max-width: unset;
     position: relative;
 
     >.row {
@@ -506,38 +517,34 @@ a {
       flex-flow: row nowrap;
       justify-content: space-between;
       align-items: center;
-      /* padding-left: 5%; */
-      max-width: 1100px;
-      gap: 30px;
+      height: 100%;
 
       >.col {
-        width: 15%;
+        height: 100%;
 
         &:first-of-type {
-          width: 85%;
+          width: 10%;
+          height: stretch;
+          border-right: 1px solid rgba(255, 255, 255, 0.2);
         }
 
-        &.certifications {
-          display: flex;
-          flex-flow: column nowrap;
-          align-items: center;
-          gap: 10px;
-
-          .title {
-            color: var(--color-white);
-            font-family: var(--font-dm-sans);
-            font-size: 19px;
-            font-weight: 600;
-            text-align: center;
-          }
+        &:nth-of-type(2) {
+          width: 90%;
+          height: 100%;
+          padding-top: 13rem;
         }
 
 
-        &.text-col {
+        .text-container {
+          padding-left: 60px;
+          padding-bottom: 30px;
+
           h1 {
             font-family: var(--font-plex-sans);
             text-transform: unset;
             font-size: 64px;
+            margin-bottom: 1.5rem;
+            line-height: 1.15;
           }
 
           p {
@@ -713,7 +720,7 @@ section.services-columns {
   }
 }
 
-section.qualifications-band {
+/* section.qualifications-band {
   background-color: transparent;
   position: relative;
   z-index: 1;
@@ -728,30 +735,14 @@ section.qualifications-band {
       gap: 20px;
 
       >.col {
-        width: 25%;
+        width: calc(25% - 20px);
         background-color: var(--color-white);
         padding: 30px;
         position: relative;
-        box-shadow: 0px 0px 0px 6px #dfdfdf;
-
-        &:before,
-        &:after {
-          position: absolute;
-          right: -6px;
-          bottom: -6px;
-          content: "" !important;
-          background-color: var(--accent-blue);
-        }
-
-        &:before {
-          width: 30px;
-          height: 6px;
-        }
-
-        &:after {
-          width: 6px;
-          height: 30px;
-        }
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        box-shadow: 0 0px 30px #0000004d;
 
         .icon {
           color: var(--color-black);
@@ -776,8 +767,86 @@ section.qualifications-band {
 
         p {
           font-size: 16px;
-          color: var(--color-black);
+          text-align: center;
           font-weight: 600;
+          color: var(--color-black);
+          font-family: var(--font-dm-sans);
+        }
+      }
+    }
+  }
+} */
+
+.qualifications-band {
+  background-color: transparent;
+  position: relative;
+  z-index: 1;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  >.container {
+    padding: 0;
+    width: 100%;
+    max-width: unset;
+
+    >.row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+
+      >.col {
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 30px;
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: calc(25% - 20px);
+        flex-flow: column nowrap;
+
+        /* &:before,
+        &:after {
+          position: absolute;
+          right: -6px;
+          bottom: -6px;
+          content: "" !important;
+          background-color: var(--accent-blue);
+        }
+
+        &:before {
+          width: 30px;
+          height: 6px;
+        }
+
+        &:after {
+          width: 6px;
+          height: 30px;
+        } */
+
+        .icon {
+          color: var(--color-black);
+          display: block;
+          margin-bottom: 16px;
+
+          svg {
+            font-size: 42px;
+            color: rgba(255, 255, 255, 0.3);
+          }
+        }
+
+        .title {
+          font-family: var(--font-plex-mono);
+          font-weight: 700;
+          font-size: 17px;
+          font-style: italic;
+          line-height: 1.1em;
+          color: var(--color-white);
+          margin-bottom: 16px;
+        }
+
+        p {
+          font-size: 16px;
+          text-align: center;
+          font-weight: 600;
+          color: var(--color-white);
           font-family: var(--font-dm-sans);
         }
       }

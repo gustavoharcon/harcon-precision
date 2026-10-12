@@ -33,42 +33,40 @@ export default function HomePage() {
       <section className="hero-section">
         <div className="container">
           <div className="row">
+            <div className="col left-side-col"></div>
             <div className="col text-col">
-              {/* <div className="badge-tag">
-                <span>Precision Sheet Metal Fabrication</span>
-              </div> */}
-              <h1 style={{ marginBottom: '1.5rem', lineHeight: '1.15' }}>
-                High Precision Sheet Metal Fabrication and Machining
-              </h1>
+              <div className="text-container">
+                <h1>
+                  High Precision Sheet Metal Fabrication and Machining
+                </h1>
+                <p>
+                  We build the critical components for computers, electronics, medical, and biomedical industries. Trusted by industry leaders since 1969, our San Diego facility delivers exact tolerances and reliable production runs.
+                </p>
+                <div className="buttons-container">
+                  <Link
+                    href="#"
+                    className="btn-third"
+                  >
+                    <span>Request a Quote</span>
+                  </Link>
+                  <Link
+                    href="#"
+                    className="btn-third"
+                  >
+                    <span>Explore Services</span>
+                  </Link>
 
-              <p>
-                We build the critical components for computers, electronics, medical, and biomedical industries. Trusted by industry leaders since 1969, our San Diego facility delivers exact tolerances and reliable production runs.
-              </p>
-
-              <div className="buttons-container">
-                <Link
-                  href="#"
-                  className="btn-fourth"
-                >
-                  <span>Request a Quote</span>
-                </Link>
-                <Link
-                  href="#"
-                  className="btn-fifth"
-                >
-                  <span>Explore Services</span>
-                </Link>
+                </div>
               </div>
-            </div>
-            <div className="col certifications">
-              <p className="title">ISO 9001:2015 Certified</p>
-              <Image src="https://res.cloudinary.com/irwujctd/image/upload/v1786123668/ISO-9001-2015-white-logo_opkqbj.png" alt="ISO 9001:2015 Certified" width={100} height={100} />
+              <div className="bottom-row">
+                <QualificationsBand />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      <QualificationsBand />
+      {/* <QualificationsBand /> */}
 
       <FacilityAndCapacity />
 

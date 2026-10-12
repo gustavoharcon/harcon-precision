@@ -4,7 +4,7 @@ import { GiMetalPlate, GiPlanetCore } from "react-icons/gi";
 import { FaSheetPlastic } from "react-icons/fa6";
 import { LiaIndustrySolid } from "react-icons/lia";
 import { BiCertification } from "react-icons/bi";
-import { SiOnlyoffice } from "react-icons/si";
+import { SiOnlyoffice, SiSpeedtest } from "react-icons/si";
 
 export const getIcon = (iconName: string) => {
     switch (iconName) {
@@ -24,6 +24,8 @@ export const getIcon = (iconName: string) => {
             return <BiCertification className="icon" />
         case "office":
             return <SiOnlyoffice className="icon" />
+        case "prototyping":
+            return <SiSpeedtest className="icon" />
         default:
             return null;
     }
