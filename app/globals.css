@@ -1088,11 +1088,28 @@ section.why-choose-us {
           >.left-side-col,
           >.right-side-col {
             width: 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            gap: 20px;
 
             >img {
               width: 100%;
               min-height: 300px;
               object-fit: cover;
+            }
+
+            >.colored-box {
+              width: 100%;
+              background-color: var(--color-white);
+              height: 100%;
+              flex-grow: 1;
+              min-height: 100px;
+            }
+          }
+
+          >.right-side-col {
+            >.colored-box {
+              background-color: var(--accent-blue);
             }
           }
         }

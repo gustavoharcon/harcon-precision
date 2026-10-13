@@ -30,9 +30,11 @@ const WhyChooseUs = () => {
                         <div className="row-2">
                             <div className="col left-side-col">
                                 <Image unoptimized src="https://res.cloudinary.com/irwujctd/image/upload/v1791920860/pexels-dilankusanc-39067318_pyx1zc.jpg" alt="" width={0} height={0} />
+                                <div className="colored-box"></div>
                             </div>
                             <div className="col right-side-col">
                                 <Image unoptimized src="https://res.cloudinary.com/irwujctd/image/upload/v1791920860/pexels-dilankusanc-39067318_pyx1zc.jpg" alt="" width={0} height={0} />
+                                <div className="colored-box"></div>
                             </div>
                         </div>
                     </div>
