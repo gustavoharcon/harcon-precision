@@ -28,20 +28,22 @@ const WhyChooseUs = () => {
                             </div>
                         </div>
                         <div className="row-2">
-                            <div className="col left-side-col"></div>
-                            <div className="col right-side-col"></div>
+                            <div className="col left-side-col">
+                                <Image unoptimized src="https://res.cloudinary.com/irwujctd/image/upload/v1791920860/pexels-dilankusanc-39067318_pyx1zc.jpg" alt="" width={0} height={0} />
+                            </div>
+                            <div className="col right-side-col">
+                                <Image unoptimized src="https://res.cloudinary.com/irwujctd/image/upload/v1791920860/pexels-dilankusanc-39067318_pyx1zc.jpg" alt="" width={0} height={0} />
+                            </div>
                         </div>
                     </div>
                     <div className="col right-side-col">
-                        <div className="items">
-                            <Image src="/" alt="" width={100} height={100} />
-                            <div className="text-box">
-                                <h3></h3>
-                                <div className="buttons-container">
-                                    <Link href="#" className="btn-third">
-                                        <span>Request a Quote</span>
-                                    </Link>
-                                </div>
+                        <Image unoptimized src="https://res.cloudinary.com/irwujctd/image/upload/v1791920860/pexels-dilankusanc-39067318_pyx1zc.jpg" alt="" width={0} height={0} />
+                        <div className="text-box">
+                            <h3>We are committed to strengthening the broader community.</h3>
+                            <div className="buttons-container">
+                                <Link href="#" className="btn-fifth">
+                                    <span>Request a Quote</span>
+                                </Link>
                             </div>
                         </div>
                     </div>

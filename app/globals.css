@@ -45,6 +45,7 @@
   --color-white-hover: #e0e0e0;
   --color-grey: rgb(238, 238, 238);
   --color-grey-2: #cbd5e1;
+  --color-grey-3: #dfdfdf;
   --temp-color: #935D8B;
   --accent-blue: #0066CC;
   --accent-blue-2: #42a1ff;
@@ -900,13 +901,15 @@ section.precision-capabilities {
             background-color: var(--accent-blue);
 
             p {
-              font-size: 26px;
-              font-weight: 700;
+              font-size: 24px;
+              font-weight: 600;
               font-style: italic;
               line-height: 1.2em;
               letter-spacing: -2px;
               word-spacing: 0px;
+              font-family: var(--font-plex-mono);
               color: var(--color-white);
+              text-wrap: balance;
             }
           }
         }
@@ -988,10 +991,14 @@ section.why-choose-us {
     >.row {
       display: flex;
       flex-flow: row nowrap;
-      gap: 30px;
+      justify-content: space-between;
+      gap: 20px;
 
       >.left-side-col {
-        width: calc(80% - 30px);
+        width: calc(78% - 20px);
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
 
         >.row-1 {
           position: relative;
@@ -1067,10 +1074,62 @@ section.why-choose-us {
             }
           }
         }
+
+        >.row-2 {
+          position: relative;
+          display: flex;
+          flex-flow: row nowrap;
+          gap: 20px;
+
+          >.left-side-col {
+            margin-top: -40px;
+          }
+
+          >.left-side-col,
+          >.right-side-col {
+            width: 50%;
+
+            >img {
+              width: 100%;
+              min-height: 300px;
+              object-fit: cover;
+            }
+          }
+        }
       }
 
       >.right-side-col {
-        width: calc(20% - 30px);
+        width: 22%;
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 20px;
+
+        >img {
+          width: 100%;
+          object-fit: cover;
+          height: auto;
+          min-height: 500px;
+        }
+
+        >.text-box {
+          display: flex;
+          flex-grow: 1;
+          flex-flow: column nowrap;
+          background-color: var(--color-grey-3);
+          padding: 30px;
+
+          h3 {
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 600;
+            line-height: 1.4em;
+            letter-spacing: -.6px;
+            color: var(--color-black);
+            font-family: var(--font-plex-mono);
+            margin-bottom: 30px;
+          }
+
+        }
       }
     }
   }
