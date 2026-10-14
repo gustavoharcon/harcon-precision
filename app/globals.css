@@ -1100,7 +1100,7 @@ section.why-choose-us {
 
             >.colored-box {
               width: 100%;
-              background-color: var(--color-white);
+              background-color: #dfdfdf;
               height: 100%;
               flex-grow: 1;
               min-height: 100px;
