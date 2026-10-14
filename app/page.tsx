@@ -20,6 +20,7 @@ import FabricationServices from '@/components/FabricationServices';
 import PrecisionCapabilities from '@/components/PrecisionCapabilities';
 import QualificationsBand from '@/components/QualificationsBand';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import Portfolio from '@/components/Portfolio';
 
 export const metadata: Metadata = {
   title: 'Harcon Precision Metals | Sheet Metal Fabrication & CNC Machining',
@@ -75,6 +76,8 @@ export default function HomePage() {
       <ServicesColumns />
 
       <WhyChooseUs />
+
+      <Portfolio />
 
     </div>
   );

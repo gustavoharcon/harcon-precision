@@ -923,7 +923,6 @@ section.precision-capabilities {
             p {
               color: var(--color-white);
               font-size: 16px;
-              margin-top: 30px;
               margin-bottom: 30px;
             }
           }
@@ -1146,6 +1145,80 @@ section.why-choose-us {
             margin-bottom: 30px;
           }
 
+        }
+      }
+    }
+  }
+}
+
+section.portfolio {
+  background: linear-gradient(180deg, #000 0%, #252525 100%);
+  padding: 120px 0;
+
+  >.container {
+    >.row {
+      >.col {
+        >.text-container {
+          >h2 {
+            color: var(--color-white);
+          }
+
+          >p {
+            color: var(--color-white);
+            font-size: 16px;
+          }
+        }
+
+        >.cards {
+          display: flex;
+          flex-flow: row nowrap;
+          gap: 20px;
+
+          >.card {
+            >.image-container {
+              position: relative;
+              max-width: fit-content;
+
+              >img {
+                width: 100%;
+                object-fit: cover;
+                max-width: 300px;
+                box-shadow: 10px 10px 40px 0 rgba(255, 255, 255, 0.1);
+              }
+
+              &:before,
+              &:after {
+                position: absolute;
+                right: 0;
+                bottom: 6px;
+                content: "" !important;
+                background-color: var(--accent-blue);
+              }
+
+              &:before {
+                width: 30px;
+                height: 6px;
+              }
+
+              &:after {
+                width: 6px;
+                height: 30px;
+              }
+
+            }
+
+            >.text-container {
+              margin-top: 20px;
+
+              >.title {
+                color: var(--color-white);
+              }
+
+              >.description {
+                color: var(--color-white);
+              }
+            }
+          }
         }
       }
     }
