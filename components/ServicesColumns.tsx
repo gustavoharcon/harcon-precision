@@ -56,6 +56,15 @@ const ServicesColumns = () => {
                         </div>
                     </div>
                 </div>
+                <div className="row buttons-row">
+                    <div className="col">
+                        <div className="buttons-container">
+                            <Link href="/" className="btn-fifth">
+                                <span>Request a Quote</span>
+                            </Link>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     )
