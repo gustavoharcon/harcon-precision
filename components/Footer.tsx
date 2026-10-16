@@ -56,12 +56,11 @@ export function Footer() {
               </div>
               <div className="terms">
                 <div className="column">
-
+                  <p>{"© " + new Date().getFullYear() + ` ${process.env.NEXT_PUBLIC_COMPANY_NAME}. All rights reserved.`}</p>
                 </div>
                 <div className="column">
-
+                  <Link href="/terms-and-conditions" aria-label="Terms & Conditions">Terms & Conditions</Link>
                 </div>
-                <div className="column"></div>
               </div>
             </div>
           </div>
