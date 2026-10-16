@@ -42,12 +42,12 @@ export function Footer() {
                   <h3 className="title">Social Media</h3>
                   <ul>
                     <li className="instagram">
-                      <Link className="instagram" href={process.env.COMPANY_INSTAGRAM_LINK} alt="Instagram" target="_blank">
+                      <Link className="instagram" href={process.env.COMPANY_INSTAGRAM_LINK || '#'} aria-label="Instagram" target="_blank">
                         {getIcon('instagram')}
                       </Link>
                     </li>
                     <li className="linkedin">
-                      <Link className="linkedin" href={process.env.COMPANY_LINKEDIN_LINK} alt="LinkedIn" target="_blank">
+                      <Link className="linkedin" href={process.env.COMPANY_LINKEDIN_LINK || '#'} aria-label="LinkedIn" target="_blank">
                         {getIcon('linkedin')}
                       </Link>
                     </li>
