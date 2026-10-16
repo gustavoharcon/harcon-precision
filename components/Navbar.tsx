@@ -34,7 +34,7 @@ export function Navbar() {
           <Link href="/" className="brand-logo" onClick={() => setMobileOpen(false)}>
             <Image
               src={harcon_precision_logo}
-              alt={process.env.NEXT_PUBLIC_COMPANY_NAME || 'Harcon Precision Metals'}
+              alt={process.env.COMPANY_NAME || 'Harcon Precision Metals'}
               width={0}
               height={0}
             />

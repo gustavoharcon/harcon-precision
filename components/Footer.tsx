@@ -13,7 +13,7 @@ export function Footer() {
               <div className="logo-container">
                 <Image
                   src={harconLogo}
-                  alt={process.env.NEXT_PUBLIC_COMPANY_NAME || 'Harcon Precision Metals'}
+                  alt={process.env.COMPANY_NAME || 'Harcon Precision Metals'}
                   width={0}
                   height={0}
                 />
@@ -56,7 +56,7 @@ export function Footer() {
               </div>
               <div className="terms">
                 <div className="column">
-                  <p>{"© " + new Date().getFullYear() + ` ${process.env.NEXT_PUBLIC_COMPANY_NAME}. All rights reserved.`}</p>
+                  <p>{"© " + new Date().getFullYear() + ` ${process.env.COMPANY_NAME}. All rights reserved.`}</p>
                 </div>
                 <div className="column">
                   <Link href="/terms-and-conditions" aria-label="Terms & Conditions">Terms & Conditions</Link>
