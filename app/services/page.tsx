@@ -6,20 +6,14 @@ import { GlobalCTA } from '@/components/GlobalCTA';
 export const metadata: Metadata = {
   title: 'Our Services | Sheet Metal Fabrication & Machining | Harcon Precision',
   description:
-    'Explore Harcon Precision Metals services: Precision Sheet Metal Fabrication, High Precision CNC Machining, and Engineering & Value-Added Assembly.',
+    'Explore Harcon Precision Metals services: Precision Sheet Metal Fabrication, Precision CNC Machining, and Engineering & Value-Added Assembly.',
 };
 
 export default function ServicesPage() {
   return (
     <div>
       {/* SECTION 1: HEADER */}
-      <section
-        style={{
-          padding: '5rem 0 4rem',
-          background: 'linear-gradient(180deg, #111827 0%, #0a0e17 100%)',
-          borderBottom: '1px solid var(--border-subtle)',
-        }}
-      >
+      <section>
         <div className="container">
           <div className="badge-tag">
             <Sparkles size={14} />
@@ -173,7 +167,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
-            {/* BLOCK 2: High Precision Machining (Alternating) */}
+            {/* BLOCK 2: Precision Machining (Alternating) */}
             <div
               style={{
                 display: 'grid',
@@ -241,7 +235,7 @@ export default function ServicesPage() {
                   <Cpu size={14} />
                   <span>CNC Machining Division</span>
                 </div>
-                <h2 style={{ marginBottom: '1.25rem' }}>High Precision Machining</h2>
+                <h2 style={{ marginBottom: '1.25rem' }}>Precision Machining</h2>
                 <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '1.75rem' }}>
                   CNC machining that guarantees tight tolerances across aluminum, stainless steel,
                   titanium, brass, and engineered plastics. We handle complex geometric features
@@ -432,6 +426,6 @@ export default function ServicesPage() {
 
       {/* REUSABLE GLOBAL CTA SECTION */}
       <GlobalCTA />
-    </div>
+    </div >
   );
 }

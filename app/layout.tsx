@@ -5,7 +5,7 @@ import { Navbar } from '@/components/Navbar';
 import { Footer } from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Harcon Precision Metals | High Precision Sheet Metal Fabrication & Machining',
+  title: 'Harcon Precision Metals | Precision Sheet Metal Fabrication & Machining',
   description:
     'Operating a 60,000 sq. ft. facility in San Diego, Harcon Precision Metals delivers advanced sheet metal fabrication and CNC machining for aerospace, medical, and electronics.',
   robots: {

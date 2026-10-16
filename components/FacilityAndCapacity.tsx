@@ -13,7 +13,7 @@ const FacilityAndCapacity = () => {
                             </div>
                             <h2 className="title">Operating 66,000 square feet of advanced CNC fabrication space</h2>
                             <p className="description">
-                                Since 1969, our San Diego facility has established a solid reputation for quality in the sheet metal fabrication industry. Located on over 3.8 acres, our impressively diversified plant features extensive in-house manufacturing capabilities. Our advanced CAD/CAM systems and SolidWorks 3D modeling are directly linked to our machinery, providing accurate responses to your drawings and ensuring a controlled production flow for consistent results.
+                                Since 1979, our San Diego facility has established a solid reputation for quality in the sheet metal fabrication industry. Located on over 3.8 acres, our impressively diversified plant features extensive in-house manufacturing capabilities. Our advanced CAD/CAM systems and SolidWorks 3D modeling are directly linked to our machinery, providing accurate responses to your drawings and ensuring a controlled production flow for consistent results.
                             </p>
                             <div className="columns">
                                 <div className="column">

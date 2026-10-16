@@ -49,7 +49,7 @@ async function main() {
     },
     {
       slug: 'high-precision-machining',
-      title: 'High Precision Machining',
+      title: 'Precision Machining',
       shortDesc:
         'CNC machining that guarantees tight tolerances across aluminum, stainless steel, and specialty alloys.',
       fullDesc:

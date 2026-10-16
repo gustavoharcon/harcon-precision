@@ -13,9 +13,9 @@ const WhyChooseUs = () => {
                                     <div className="badge-tag">
                                         <span>Why Choose Harcon Precision Metals?</span>
                                     </div>
-                                    <h2>Precision, Quality, and Experience Since 1969</h2>
+                                    <h2>Precision, Quality, and Experience Since 1979</h2>
                                     <ul>
-                                        <li><strong>Over 50 Years of Expertise:</strong> A solid reputation for quality in the sheet metal fabrication industry.</li>
+                                        <li><strong>30 Years of Expertise:</strong> A solid reputation for quality in the sheet metal fabrication industry.</li>
                                         <li><strong>Advanced Technology:</strong> State-of-the-art equipment and CAD/CAM systems directly linked to our machinery.</li>
                                         <li><strong>In-House Manufacturing:</strong> Extensive capabilities built on a foundation of talent and equipment, utilizing tools like SolidWorks and AMADA software.</li>
                                     </ul>

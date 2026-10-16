@@ -1,4 +1,4 @@
-import { FaWater } from "react-icons/fa";
+import { FaWater, FaInstagramSquare, FaLinkedin } from "react-icons/fa";
 import { LuServerCog } from "react-icons/lu";
 import { GiMetalPlate, GiPlanetCore } from "react-icons/gi";
 import { FaSheetPlastic } from "react-icons/fa6";
@@ -26,6 +26,10 @@ export const getIcon = (iconName: string) => {
             return <SiOnlyoffice className="icon" />
         case "prototyping":
             return <SiSpeedtest className="icon" />
+        case "instagram":
+            return <FaInstagramSquare className="icon" />
+        case "linkedin":
+            return <FaLinkedin className="icon" />
         default:
             return null;
     }

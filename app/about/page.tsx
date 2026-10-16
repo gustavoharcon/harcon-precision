@@ -243,7 +243,7 @@ export default function AboutPage() {
                   Driven by Advanced Software
                 </h3>
                 <p style={{ fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '1.5rem' }}>
-                  At Harcon, high precision starts long before metal is shaped. Our engineering team
+                  At Harcon, precision starts long before metal is shaped. Our engineering team
                   utilizes SolidWorks 3D Modeling and specialized sheet metal unfolding algorithms
                   directly integrated with our CNC machine controls.
                 </p>

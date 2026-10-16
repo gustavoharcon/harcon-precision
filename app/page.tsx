@@ -25,7 +25,7 @@ import Portfolio from '@/components/Portfolio';
 export const metadata: Metadata = {
   title: 'Harcon Precision Metals | Sheet Metal Fabrication & CNC Machining',
   description:
-    'High precision sheet metal fabrication and CNC machining for electronics, medical, and aerospace industries since 1979 in San Diego, CA.',
+    'Precision sheet metal fabrication and CNC machining for electronics, medical, and aerospace industries since 1979 in San Diego, CA.',
 };
 
 export default function HomePage() {
@@ -39,10 +39,10 @@ export default function HomePage() {
             <div className="col text-col">
               <div className="text-container">
                 <h1>
-                  High Precision Sheet Metal Fabrication and Machining
+                  <span>High Precision Sheet Metal Fabrication and Machining</span>
                 </h1>
                 <p>
-                  We build the critical components for computers, electronics, medical, and biomedical industries. Trusted by industry leaders since 1969, our San Diego facility delivers exact tolerances and reliable production runs.
+                  We build the critical components for computers, electronics, medical, and biomedical industries. Trusted by industry leaders since 1979, our San Diego facility delivers exact tolerances and reliable production runs.
                 </p>
                 <div className="buttons-container">
                   <Link
